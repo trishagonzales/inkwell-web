@@ -1,0 +1,28 @@
+import { definePreset } from '@pandacss/dev';
+import type { Preset } from '@pandacss/types';
+import { keyframes } from './theme/keyframes';
+import { recipes, slotRecipes } from './theme/recipes';
+import { semanticTokens } from './theme/semantic-tokens';
+import { textStyles } from './theme/text-styles';
+import { tokens } from './theme/tokens';
+import { conditions } from './conditions';
+import { globalCss } from './global-css';
+import { patterns } from './patterns';
+
+const preset: Preset = definePreset({
+  theme: {
+    extend: {
+      keyframes,
+      recipes,
+      semanticTokens,
+      slotRecipes,
+      textStyles,
+      tokens,
+    },
+  },
+  conditions,
+  globalCss,
+  patterns,
+});
+
+export default preset;
